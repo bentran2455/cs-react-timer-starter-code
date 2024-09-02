@@ -12,7 +12,7 @@ const useTimer = (ini = 0) => {
   const active = useRef(null);
 
   const startTimer = () => {
-    if (isStart.current) return; // Prevent starting multiple intervals
+    if (isStart.current) return;
     refInterval.current = setInterval(() => {
       setTime((prev) => {
         let { hrs, min, sec } = prev;
